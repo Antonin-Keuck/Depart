@@ -2,7 +2,7 @@
   "name": "antonin_depart",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Antonin-Keuck.github.io/Depart",
+  "homepage": "https://antonin-Keuck.github.io/Depart/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
