@@ -12,8 +12,7 @@ h1 {
 
 @media screen and (max-width: 768px)  {
     .textOnBar {
-        font-size: 400%;
-        color: red;
+        font-size: 300%;
     }
 }
 
