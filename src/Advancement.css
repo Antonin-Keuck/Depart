@@ -9,7 +9,14 @@ h1 {
 .textOnBar {
     font-size: 600%;
 }
-  
+
+@media screen and (max-width: 768px)  {
+    .textOnBar {
+        font-size: 400%;
+    }
+}
+
+
 .progressBarContainer {
     padding: 3%;
     margin: 0 auto;
