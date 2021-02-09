@@ -79,8 +79,8 @@ function Advancement({depart, status, greenFirst}) {
           }}
         />
           {/* <img style={{ width: 40, marginTop: -5 }} src="https://i.imgur.com/b9NyUGm.png" alt="doge" /> */}
-          <div className="textOnBar">
-            <strong>{percentage} % </strong>
+          <div>
+            <strong className="textOnBar">{percentage} % </strong>
           </div>
         </CircularProgressbarWithChildren>
       </div>
