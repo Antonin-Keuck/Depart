@@ -1,19 +1,22 @@
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-circular-progressbar/dist/styles.css';
-import logo from './logo.svg';
-import { CircularProgressbarWithChildren } from 'react-circular-progressbar';
-import Advancement from './Advancement'
+import {HashRouter as Router, Switch, Route} from 'react-router-dom';  
+import Navbar from './Components/Navbar'
+import Home from './pages/Home'
 import './App.css';
 
 
-
-function App() {
-
+function App() {  
   return (
+    <Router>
     <div className="App">
-      <Advancement status="Départ" depart="08/15/2021" greenFirst={true}/>
-      <Advancement status="Retour" depart="05/27/2022"greenFirst={false}/>
+      <Navbar/>
     </div>
+
+        <Switch>
+          <Route path="/" exact component={Home}/>
+        </Switch>
+    </Router>
   );
 }
 

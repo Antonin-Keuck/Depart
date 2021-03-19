@@ -1,0 +1,28 @@
+.Advancement {
+    /* padding-top: 6%; */
+    text-align: center;
+}
+
+.titleOfAdvancement {
+    font-size: 500%;
+}
+
+.days {
+    font-size: 300%;
+}
+
+.textOnBar {
+    font-size: 600%;
+}
+
+@media screen and (max-width: 768px)  {
+    .textOnBar {
+        font-size: 240%;
+    }
+}
+
+.progressBarContainer {
+    padding: 3%;
+    margin: 0 auto;
+    width: 50%;
+}
