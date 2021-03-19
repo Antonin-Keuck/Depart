@@ -4,7 +4,6 @@
 
 body {
     background-color: #f1f1f1;
-    padding: 20px;
     font-family: Arial;
   }
   
@@ -44,6 +43,7 @@ body {
   
   /* Content */
   .pictures-content {
+    text-align: justify;
     background-color: white;
     padding: 10px;
   }

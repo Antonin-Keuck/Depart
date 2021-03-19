@@ -35,7 +35,7 @@ const Pictures = () => (
             </div>
             <div className="pictures-content">
                 <img src={`${process.env.PUBLIC_URL}/assets/img5.jpeg`} alt="description" style={{width:"100%"}}/>
-                <h3>Some Other Work</h3>
+                <h3>Un beau film</h3>
                 <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no. Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
             </div>
         </div>

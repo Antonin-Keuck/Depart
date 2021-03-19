@@ -1,0 +1,44 @@
+.team-wrapper {
+    padding: 4%;
+    /* width: 60%; */
+}
+
+.team-carousel-image {
+    width: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.team-carousel-image {
+    width: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.team-carousel-image:focus {
+    border: 1px solid black;
+
+}
+
+.team-carousel-wrapper {
+    /* margin: 0 auto; */
+    /* background-color: black; */
+    /* border: 4px solid #242222; */
+}
+
+/* .team-carousel-title {
+    text-align: center;
+    color: #7937b3;
+    text-shadow: 2px 3px 2px #552a7a;
+} */
+
+.team-carousel-mate {
+    /* border: 1px solid black; */
+}
+
+
+
+.rec-carousel-item:focus {
+    outline: none;
+    transform: scale(1.5);
+    box-shadow: inset 0 0 1px 1px red;
+}

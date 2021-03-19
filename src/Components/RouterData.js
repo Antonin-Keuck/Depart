@@ -2,6 +2,7 @@ import {FaCartPlus, FaEnvelopeOpenText} from 'react-icons/fa'
 import {AiFillHome} from 'react-icons/ai'
 import {IoIosPaper, IoMdPeople, IoMdHelpCircle} from 'react-icons/io'
 import {GiCommercialAirplane} from 'react-icons/gi'
+import Team from '../pages/Team'
 
 export const RouterData = [
     {
@@ -31,21 +32,22 @@ export const RouterData = [
       path: '/products',
       icon: <FaCartPlus />,
       cName: 'nav-text',
-      about: 'Cette page n\'est pas connecté a une api, vu qu\'elle est hebergée par github.pages'
+      about: 'Cette page n\'est pas connectée à une api, vu qu\'elle est hebergée par github.pages'
     },
     {
       title: 'Team',
       path: '/team',
       icon: <IoMdPeople />,
       cName: 'nav-text',
-      about: 'Cette page n\'est pas connecté a une api, vu qu\'elle est hebergée par github.pages. Vous trouverez ici une team fictive'
+      about: 'Cette page n\'est pas connectée à une api, vu qu\'elle est hebergée par github.pages. Vous trouverez ici une team fictive',
+      page: <Team/>
     },
     {
       title: 'Messages',
       path: '/messages',
       icon: <FaEnvelopeOpenText />,
       cName: 'nav-text',
-      about: 'Cette section sera a terme remplacé par une nouvelle idée'
+      about: 'Cette section sera à terme remplacé par une nouvelle idée'
     },
     {
       title: 'Support',

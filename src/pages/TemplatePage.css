@@ -14,8 +14,10 @@
 
 .tempPage-title-2 {
     padding: 2%;
-    text-align: center;
+    margin: 0 auto;
+    text-align: justify;
     font-size: 200%;
+    width: 57%;
 }
 
 .tempPage-text {
@@ -33,7 +35,12 @@
     }
     .tempPage-title {
         font-size: 400%;
-        }
+    }
+    .tempPage-title-2 {
+        width: 82%;
+        font-size: 180%;
+
+    }
 }
 
 @media screen and (max-width: 350px) {
