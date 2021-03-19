@@ -3,6 +3,8 @@ import 'react-circular-progressbar/dist/styles.css';
 import {HashRouter as Router, Switch, Route} from 'react-router-dom';  
 import Navbar from './Components/Navbar'
 import Home from './pages/Home'
+import {RouterData} from './Components/RouterData'
+import TemplatePage from './pages/TemplatePage'
 import './App.css';
 
 
@@ -15,6 +17,13 @@ function App() {
 
         <Switch>
           <Route path="/" exact component={Home}/>
+          <Route path="/travel" exact component={Home}/>
+        {RouterData.map((item, index) => {
+          return (
+            <Route key={index} path={item.path} exact component={() => (TemplatePage(item.title, item.icon, item.about))}/>
+          )
+        })}
+        {/* <Route path="/team" exact component={() => (TemplatePage() ) }/> */}
         </Switch>
     </Router>
   );

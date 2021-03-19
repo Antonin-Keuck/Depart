@@ -1,0 +1,26 @@
+.tempPage-header {
+    /* margin: 0 auto; */
+}
+
+.tempPage-icon {
+    /* font-size: 300px; */
+}
+
+.tempPage-title {
+    padding-top: 2%;
+    text-align: center;
+    font-size: 700%;
+}
+
+.tempPage-title-2 {
+    padding: 2%;
+    text-align: center;
+    font-size: 200%;
+}
+
+.tempPage-text {
+    font-size: 100%;
+    margin: 0 auto;
+    width: 50%;
+    text-align: justify;
+}

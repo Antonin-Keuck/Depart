@@ -2,10 +2,15 @@ import React, {useState, useEffect, useRef, useLayoutEffect} from 'react'
 import {FaBars} from 'react-icons/fa'
 import {AiOutlineClose} from 'react-icons/ai'
 import {Link} from 'react-router-dom'
-import {SidebarData } from './SidebarData'
+import {RouterData } from './RouterData'
 import { IconContext } from 'react-icons';
 import "./Navbar.css"
 
+
+
+function refreshPage() {
+  window.location.reload();
+}
 
 function Navbar() {
   const [navbar, setNavbar] = useState(true);
@@ -37,7 +42,7 @@ function Navbar() {
           <div className='menu-openItem'>
             <FaBars onClick={showSidebar} />
             </div>
-            <Link to="/" className='wraperTitle'>
+            <Link to="/"  className='wraperTitle'>
             <h1 className='navbarTitle'>A n t o n i n</h1>
             </Link>
           </div>
@@ -49,7 +54,7 @@ function Navbar() {
                   <AiOutlineClose />
                 </div>
               </li>
-              {SidebarData.map((item, index) => {
+              {RouterData.map((item, index) => {
                   return (
                       <li key={index} className={item.cName} onClick={showSidebar}>
                     <Link to={item.path}>
