@@ -1,5 +1,6 @@
 import './TemplatePage.css'
 import Pictures from '../Components/Pictures'
+import {FaRegSmileWink} from 'react-icons/fa'
 
 
 const TemplatePage = (name, icon, about) => (
@@ -9,7 +10,7 @@ const TemplatePage = (name, icon, about) => (
             <h2 className="tempPage-title-2"> {about} </h2>
         </div>
         <div className="tempPage-text">
-            Vous vous trouvez pour l'instant sur une page template, cela signifie que je n'ai pas encore trouvé le temps (ou la motivation de la faire (:))
+            Vous vous trouvez pour l'instant sur une page template, cela signifie que je n'ai pas encore trouvé le temps (ou la motivation de la faire <FaRegSmileWink/> )
         </div>
         <Pictures/>
 
