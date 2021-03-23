@@ -9,7 +9,7 @@
 .tempPage-title {
     padding-top: 2%;
     text-align: center;
-    font-size: 700%;
+    font-size: 8vw;
 }
 
 .tempPage-title-2 {
@@ -29,22 +29,24 @@
 
 @media screen and (max-width: 600px) {
     .tempPage-text {
-        width: 80%;
+        width: 82vw;
+        /* width: 80%; */
         /* color: red; */
         
     }
     .tempPage-title {
-        font-size: 400%;
+        font-size: 15vw;;
     }
     .tempPage-title-2 {
-        width: 82%;
-        font-size: 180%;
+        width: 82vw;
+        font-size: 7vw;
+        /* font-size: 180%; */
 
     }
 }
 
 @media screen and (max-width: 350px) {
-    .tempPage-title {
-        font-size: 300%;
-        }
+    /* .tempPage-title {
+        font-size: 10vw;
+        } */
 }

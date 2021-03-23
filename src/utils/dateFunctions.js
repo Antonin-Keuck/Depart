@@ -9,12 +9,12 @@ export function dayBeforeBirthday(birthDate) {
     const currentDate = new Date();
     const birthday = new Date(birthDate);
     const currentYear = currentDate.getFullYear();
-  
+
     birthday.setFullYear(currentYear)
     birthday.setFullYear( (birthday.getTime() < currentDate.getTime() ? currentYear + 1 : currentYear)  );
     const timeBeforeBirthday = birthday.getTime() - currentDate.getTime();
     const dayBeforeBirthday = (timeBeforeBirthday / (1000 * 3600 * 24)).toFixed(0)
-    
+
     return (dayBeforeBirthday);
 }
 
@@ -31,7 +31,7 @@ export function getNumberDays(beginDate, endDate, percentageNeeded) {
     return  ( ((timeBeforeGo - advancedTime) / (1000 * 3600 * 24)).toFixed(0) )
     var percentage = (advancedTime * 100 / timeBeforeGo);
     if (percentageNeeded === true)
-    return(percentage.toFixed(2));
+    return( (percentage < 100 ? percentage.toFixed(2) : 0) );
 }
 
 export function writeDate(date) {

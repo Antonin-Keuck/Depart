@@ -1,24 +1,38 @@
 .Advancement {
-    /* padding-top: 6%; */
+    padding-bottom: 2vw;
     text-align: center;
 }
 
-.titleOfAdvancement {
-    font-size: 500%;
+.advancement-title {
+    font-size: 5vw;
 }
 
 .days {
-    font-size: 300%;
+    font-size: 3vw;
 }
 
 .textOnBar {
-    font-size: 600%;
+    font-size: 5vw;
 }
 
 @media screen and (max-width: 768px)  {
     .textOnBar {
-        font-size: 240%;
+        font-size: 10vw;
     }
+    .advancement-title {
+        font-size: 10vw;
+    }
+    .days {
+        font-size: 8vw;
+    }
+    
+    
+}
+
+@media screen and (max-width: 390px) {
+    /* .advancement-title {
+        font-size: 500%;
+    }     */
 }
 
 .progressBarContainer {

@@ -15,25 +15,35 @@ function refreshPage() {
 function Navbar() {
   const [navbar, setNavbar] = useState(true);
   const [sidebar, setSidebar] = useState(false);
-  let topScroll = document.body.getBoundingClientRect().top
+  const sidebarHiddenIsActive = useRef(false);
 
-  const showSidebar = () => setSidebar(!sidebar);
+  let topScroll = document.body.getBoundingClientRect().top
 
   const handleScroll = () => {
     const currentTop = document.body.getBoundingClientRect().top;
 
     if (currentTop > topScroll) {
+        if (sidebarHiddenIsActive.current)
+            setSidebar(true)
       setNavbar(true)
     } else {
       setNavbar(false)
+      setSidebar(false)
     }
     topScroll = currentTop
   }
+
+  const showSidebar = () => {
+
+    setSidebar(!sidebar)
+      sidebarHiddenIsActive.current = sidebarHiddenIsActive.current ? false : true
+  };
+
   
   useEffect(() => {
       window.addEventListener("scroll", handleScroll)
   }, [])
-  
+
     return (
       <>
       <IconContext.Provider value={{ color: '#fff' }}>
@@ -42,8 +52,8 @@ function Navbar() {
           <div className='menu-openItem'>
             <FaBars onClick={showSidebar} />
             </div>
-            <Link to="/"  className='wraperTitle'>
-            <h1 className='navbarTitle'>A n t o n i n</h1>
+            <Link to="/travel"  className='wraperTitle'>
+            <h1 className='navbarTitle' onClick={() => setSidebar(false)} >A n t o n i n</h1>
             </Link>
           </div>
         </div>
@@ -71,42 +81,4 @@ function Navbar() {
     );
 }
 
-
-
-// const Navbar = () => {
-//   const [prevScrollPos, setPrevScrollPos] = useState(0); 
-//   const [visible, setVisible] = useState(true);  
-
-//   const handleScroll = debounce(() => {
-//     const currentScrollPos = window.pageYOffset;
-
-//     setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 70) || currentScrollPos < 10);
-
-//     setPrevScrollPos(currentScrollPos);
-//   }, 100);
-
-//   useEffect(() => {
-//     window.addEventListener('scroll', handleScroll);
-
-//     return () => window.removeEventListener('scroll', handleScroll);
-
-//   }, [prevScrollPos, visible, handleScroll]);
-
-//   const navbarStyles = {
-//     position: 'fixed',
-//     height: '60px',
-//     width: '100%',
-//     backgroundColor: 'grey',
-//     textAlign: 'center',
-//     transition: 'top 0.6s' 
-//   }
-
-//   return (
-//     <div style={{ ...navbarStyles, top: visible ? '0' : '-60px' }}>  
-//       Some Company Inc.
-//     </div>
-//   );
-// };
-
-// export default Navbar;
 export default Navbar

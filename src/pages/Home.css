@@ -1,0 +1,19 @@
+
+
+.home-paragraph {
+    margin: 0 auto;
+    text-align: justify;
+    font-size: 3vw;
+    width: 80vw;
+}
+
+@media screen and (max-width: 768px)  {
+    .home-paragraph {
+        padding-top: 8vw;
+        margin: 0 auto;
+        text-align: justify;
+        font-size: 5vw;
+        width: 80vw;
+        padding-bottom: 5vw;
+    }
+}

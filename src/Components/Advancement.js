@@ -4,7 +4,7 @@ import { CircularProgressbarWithChildren, CircularProgressbar, buildStyles } fro
 import RadialSeparators from "../RadialSeparators.js";
 import './Advancement.css';
 import {useInterval} from '../utils/hooks/useInterval'
-import {getNumberDays} from '../utils/dateFunctions'
+import {getNumberDays, dayBeforeBirthday} from '../utils/dateFunctions'
 
 function percentageToColor(percentage, greenFirst) {
     if (greenFirst === true) {
@@ -13,28 +13,32 @@ function percentageToColor(percentage, greenFirst) {
         return (`rgba(${255 - 255* percentage / 100 }, ${255 * percentage / 100 }, 0, 1 )`);
 }
 
-function Advancement({depart, status, greenFirst}) {
-  const [numberDays, setNumberDays] = useState(getNumberDays("02/08/2021", depart, false));
-  const [percentage, setPercentage] = useState(getNumberDays("02/08/2021", depart, true));
+function Advancement({children, endDate, greenFirst, beginDate}) {
+  const [numberDays, setNumberDays] = useState(getNumberDays(beginDate, endDate, false));
+  const [percentage, setPercentage] = useState(getNumberDays(beginDate, endDate, true));
+
+
+  useEffect(() => {
+    setNumberDays(getNumberDays(beginDate, endDate, false));
+    setPercentage(getNumberDays(beginDate, endDate, true));    
+  }, [beginDate, endDate])
 
   useInterval(() => {
-      setNumberDays(getNumberDays("02/08/2021", depart, false));
-      setPercentage(getNumberDays("02/08/2021", depart, true));
+      setNumberDays(getNumberDays(beginDate, endDate, false));
+      setPercentage(getNumberDays(beginDate, endDate, true));
     }, 60000 * 30)
 
-
-    
-  return (
+    return (
     <div className="Advancement">
-        <h1 className="titleOfAdvancement">{status} d'Antonin</h1>
+        <h1 className="advancement-title">{(children ? children : "Votre évènement")}</h1>
       <div className="days">
-          Jours restants : {numberDays}
+          {numberDays > 0 ?  "Jours restants : " + numberDays : "Cette date est passée"}
       </div>
       <div className="progressBarContainer">
-        <CircularProgressbarWithChildren className="progressBarWithChild" value={percentage} strokeWidth={5} 
+        <CircularProgressbarWithChildren className="progressBarWithChild" value={percentage} strokeWidth={5}
         styles={buildStyles({
             pathColor: `${percentageToColor(percentage, greenFirst)}`,
-            strokeLinecap: "butt"
+            strokeLinecap: "butt",
         })}>
         <RadialSeparators
           count={12}

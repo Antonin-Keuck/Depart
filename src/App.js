@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import {RouterData} from './Components/RouterData'
 import TemplatePage from './pages/TemplatePage'
 import Team from './pages/Team'
+import Travel from './pages/Travel'
 import './App.css';
 
 
@@ -15,11 +16,11 @@ function App() {
     <div className="App">
       <Navbar/>
     </div>
-
         <Switch>
-          <Route path="/" exact component={Home}/>
-          <Route path="/travel" exact component={Home}/>
+          {/* <Route path="/" exact component={Home}/> */}
+          {/* <Route path="/" exact component={Contact}/> */}
           {/* <Route path="/team" exact component={Team}/> */}
+          {/* <Route path="/travel" exact component={Travel}/> */}
         {RouterData.map((item, index) => {
           return (
             <Route key={index} path={item.path} exact component={() => (TemplatePage(item.title, item.icon, item.about, item.page))}/>
