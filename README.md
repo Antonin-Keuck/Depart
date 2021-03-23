@@ -1,6 +1,6 @@
 <p align="center">
   <a>
-    <img alt="Travel Logo" src="./public/logo512.png" width="3vw" height="3vw"/>
+    <img alt="Travel Logo" src="./public/logo512.png" width="30%" height="30%"/>
   </a>
   <p align="center">Example of a website about my future travel to study in San Marcos</p>
 </p>
