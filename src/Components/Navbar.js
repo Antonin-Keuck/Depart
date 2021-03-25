@@ -39,32 +39,20 @@ function Navbar() {
     sidebarHiddenIsActive.current = !sidebar
 
     if (sidebarHiddenIsActive.current == false) {
-      // console.log("j'desactive")
       window.removeEventListener("click", showSidebar)
     }
-    // console.log("sidebar hidden status : " + sidebarHiddenIsActive.current)
   };
 
 
   useEffect(() => {
     if (sidebarHiddenIsActive.current) {
-      // console.log("j'active")
-      window.addEventListener("click", showSidebar)
-    } else {
+        window.addEventListener("click", showSidebar)
+    } else
+        window.removeEventListener("click", showSidebar)
 
-      // console.log("j'desactive")
-      window.removeEventListener("click", showSidebar)
-    }
-
-    // console.log("did it works ?  " + sidebarHiddenIsActive.current) 
-  }, [sidebarHiddenIsActive.current])
+    }, [sidebarHiddenIsActive.current])
 
   useEffect(() => {
-    // window.addEventListener("click", (event) => {
-      // console.log("sidebar hidden: " + sidebarHiddenIsActive.current)
-      // if (sidebarHiddenIsActive.current)
-        // setSidebar(false)
-    // } );
       window.addEventListener("scroll", handleScroll)
   }, [])
 

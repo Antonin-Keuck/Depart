@@ -1,10 +1,8 @@
-.tempPage-header {
-    /* margin: 0 auto; */
+/* .tempPage-header {
 }
 
 .tempPage-icon {
-    /* font-size: 300px; */
-}
+} */
 
 .tempPage-title {
     padding-top: 2%;
@@ -17,21 +15,21 @@
     margin: 0 auto;
     text-align: justify;
     font-size: 200%;
-    width: 57%;
+    width: 51%;
 }
 
 .tempPage-text {
     font-size: 120%;
     margin: 0 auto;
-    width: 50%;
+    width: 51%;
     text-align: justify;
 }
 
 @media screen and (max-width: 600px) {
     .tempPage-text {
-        width: 82vw;
-        /* width: 80%; */
-        /* color: red; */
+        width: 96vw;
+        padding-right: 2vw;
+        padding-left: 2vw;
         
     }
     .tempPage-title {
@@ -40,7 +38,6 @@
     .tempPage-title-2 {
         width: 82vw;
         font-size: 7vw;
-        /* font-size: 180%; */
 
     }
 }

@@ -6,10 +6,12 @@ import { render } from '@testing-library/react'
 
 const  TemplateToFill = () => (
         <div>
-        <div className="tempPage-text">
-        Vous vous trouvez pour l'instant sur une page template, cela signifie que je n'aie pas encore trouvé le temps (ou la motivation de la faire <FaRegSmileWink/> )
-        </div>
-        <Pictures/>
+            <div className="tempPage-text">
+            Vous vous trouvez pour l'instant sur une page template, cela signifie que je n'aie pas encore trouvé le temps (ou la motivation de la faire <FaRegSmileWink/> )
+            </div>
+            <div className="tempPage-picture-container">
+                <Pictures/>
+            </div>
         </div>
 )
 
@@ -21,7 +23,6 @@ const TemplatePage = (name, icon, about, page) => (
             <h2 className="tempPage-title-2"> {about} </h2>
         </div>
         {page ? page : <TemplateToFill/>}
-        {/* <TemplateToFill/> */}
 
     </div>
 )

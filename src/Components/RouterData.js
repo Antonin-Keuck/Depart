@@ -49,14 +49,14 @@ export const RouterData = [
       path: '/products',
       icon: <FaCartPlus />,
       cName: 'nav-text',
-      about: 'Cette page n\'est pas connectée à une api, vu qu\'elle est hebergée par github.pages'
+      about: 'Cette section doit être implementée la feature arrivera plus ou moins rapidement'
     },
     {
       title: 'Team',
       path: '/team',
       icon: <IoMdPeople />,
       cName: 'nav-text',
-      about: 'Cette page n\'est pas connectée à une api, vu qu\'elle est hebergée par github.pages. Vous trouverez ici une team fictive',
+      about: 'Cette section doit être implementée la feature arrivera plus ou moins rapidement. Vous trouverez ici une team fictive',
       page: <Team/>
     },
     {
