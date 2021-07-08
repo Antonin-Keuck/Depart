@@ -1,5 +1,5 @@
 <p align="center">
-  <a>
+  <a href="https://antonin-keuck.github.io/Depart/#/">
     <img alt="Travel Logo" src="./public/logo512.png" width="30%" height="30%"/>
   </a>
   <p align="center">Example of a website about my future travel to study in San Marcos</p>
