@@ -56,7 +56,7 @@ src: "/assets/pdp8.png"
 
 ]
 
-const Team = () => {
+export const Team = () => {
 
     return (
     <div className="team-wrapper">
@@ -71,5 +71,3 @@ const Team = () => {
     </div>
     )
 }
-
-export default Team

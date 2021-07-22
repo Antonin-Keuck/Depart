@@ -1,7 +1,7 @@
 import "./Home.css"
 
 
-const Home = () => {
+export const Home = () => {
 
     return (
         <div className="home-wrapper">
@@ -12,4 +12,4 @@ const Home = () => {
     )
 }
 
-export default Home
+// export default Home

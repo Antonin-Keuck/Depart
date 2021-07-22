@@ -2,11 +2,7 @@ import {FaCartPlus, FaEnvelopeOpenText} from 'react-icons/fa'
 import {AiFillHome} from 'react-icons/ai'
 import {IoIosPaper, IoMdPeople, IoMdHelpCircle} from 'react-icons/io'
 import {GiCommercialAirplane} from 'react-icons/gi'
-import Team from '../pages/Team'
-import Contact from '../pages/Contact'
-import HowLong from '../pages/HowLong'
-import Home from '../pages/Home'
-import Travel from '../pages/Travel'
+import {Team, Contact, HowLong, Home, Travel, WhatTime} from '../pages/index';
 import {FcHome} from 'react-icons/fc'
 import {BiTimer} from 'react-icons/bi'
 
@@ -37,12 +33,19 @@ export const RouterData = [
       page: <HowLong/>
     },
     {
+      title: 'What time',
+      path: '/whatTime',
+      icon: <BiTimer/>,
+      cName: 'nav-text',
+      about: 'Sur cette page vous pouvez entrer l\'heure française vous obtiendrez l\'heure de chaque membre de whispr selon son fuseau horaire',
+      page: <WhatTime/>
+    },
+    {
       title: 'Reports',
       path: '/reports',
       icon: <IoIosPaper />,
       cName: 'nav-text',
       about: 'Ici sera bientot implementé une section avec des articles'
-
     },
     {
       title: 'Products',

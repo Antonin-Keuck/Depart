@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
-import Advancement from '../Components/Advancement'
-import SelectDate from '../Components/SelectDate'
+import Advancement from '../../Components/Advancement'
+import SelectDate from '../../Components/SelectDate'
 import "./HowLong.css"
 
 
@@ -13,7 +13,7 @@ function chooseYear(date) {
         return (`${currentDate.getFullYear() - 1}-${month}-${day}`)
 }
 
-const HowLong = () => {
+export const HowLong = () => {
 
     const [date, setDate] = useState(new Date())
     const [beginDate, setBeginDate] = useState(new Date())
@@ -40,10 +40,10 @@ const HowLong = () => {
                     </form>
                 </div>
             </div>
-            <Advancement 
+            <Advancement
             beginDate={beginDate}
             endDate={date}
-            greenFirst={true}key="0">{eventName}</Advancement> 
+            greenFirst={true}key="0">{eventName}</Advancement>
         </div>
     )
 
@@ -55,5 +55,3 @@ const HowLong = () => {
 
     )
 }
-
-export default HowLong

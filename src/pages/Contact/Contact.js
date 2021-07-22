@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Contact.css'
 
-class Contact extends Component {
+export class Contact extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -23,7 +23,6 @@ class Contact extends Component {
 
     handleInputChange = event => {
         const name = event.target.name
-        
             this.setState({
                 [name]: event.target.value
             })
@@ -87,5 +86,3 @@ class Contact extends Component {
         )
     }
 }
-
-export default Contact
