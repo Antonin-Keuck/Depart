@@ -1,16 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-circular-progressbar/dist/styles.css';
-import {HashRouter as Router, Switch, Route} from 'react-router-dom';  
+import {HashRouter as Router, Switch, Route} from 'react-router-dom';
 import Navbar from './Components/Navbar'
-import Home from './pages/Home'
+import {Home, TemplatePage, Team, Travel} from './pages'
 import {RouterData} from './Components/RouterData'
-import TemplatePage from './pages/TemplatePage'
-import Team from './pages/Team'
-import Travel from './pages/Travel'
 import './App.css';
 
 
-function App() {  
+function App() {
   return (
     <Router>
     <div className="App">

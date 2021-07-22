@@ -1,5 +1,5 @@
 <p align="center">
-  <a>
+  <a href="https://antonin-keuck.github.io/Depart/#/" target="_blank">
     <img alt="Travel Logo" src="./public/logo512.png" width="30%" height="30%"/>
   </a>
   <p align="center">Example of a website about my future travel to study in San Marcos</p>
@@ -8,7 +8,7 @@
 
 ## View
 
-You can see my web site on this url : https://antonin-keuck.github.io/Depart/#/
+You can see my web site on this link : <a href="https://antonin-keuck.github.io/Depart/#/" target="_blank"> antonin.keuck/depart </a>
 
 ## Build
 
